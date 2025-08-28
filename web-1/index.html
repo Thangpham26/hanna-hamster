@@ -64,48 +64,78 @@
       0% { transform: translateY(100vh) scale(1); opacity: 1; }
       100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
     }
+    
+
+
+
   </style>
 </head>
 <body>
 
   <!-- Background Music -->
   <audio id="bgMusic" autoplay loop>
-    <source src="ssource/Phép Màu.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
+    <source src="source/Phésp Màu.mp3" type="audio/mpeg">
   </audio>
 
   <!-- Landing Page -->
-  <div id="landing" class="page active">
-    <h1>Hey love ❤️</h1>
-    <p>I made something special for you...</p>
-    <div>
-      <img class="animate__animated animate__bounce" src="source\\z6938726579669_d11bd28d1a5a83978496a90f07d2b613-removebg-preview.png"  alt="cute">
-    </div>
-    <button onclick="startSite()">Click to begin</button>
+<div id="landing" class="page active" style="text-align:center; font-family:'Comic Sans MS', 'Segoe UI', sans-serif;">
+
+  <h1 style="font-size: 48px; color: #e91e63; margin-bottom: 10px;">
+    Chào em yêu ❤️
+  </h1>
+
+  <p style="font-size: 22px; color: #444; margin-top: 0;">
+    Anh có cái này cho em nàaaaaaaaaaaaaaaaaa
+  </p>
+
+  <div>
+    <img class="animate__animated animate__bounce" 
+         src="source/z6938726579669_d11bd28d1a5a83978496a90f07d2b613-removebg-preview.png"  
+         alt="cute"
+         style="max-width: 200px; height: auto; margin: 20px auto; display:block;">
   </div>
 
+  <button onclick="startSite()" 
+          style="padding: 12px 24px; font-size: 20px; border:none; border-radius:12px; background:#ff4081; color:white; cursor:pointer; transition:0.3s;">
+   BẮT ĐẦU HOYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY
+  </button>
+
+</div>
+
   <!-- Letter Page -->
-  <div id="letter" class="page" style="justify-content: center;justify-items: center;">
-    <h2>💌 A Letter For You 💌</h2>
-    <p id="typedLetter" style="max-width: 700px; font-size: 40px;"></p>
-    <button id="letterNext" style="display:none;" onclick="goToPage('memories')">Continue ➡️</button>
-  </div>
+  <div id="letter" class="page" 
+     style=" text-align:center; font-family:'Comic Sans MS','Segoe UI',cursive; padding:20px;">
+
+  <h2 style="font-size: 48px; color:#e91e63; margin-bottom: 20px;">
+    💌 A Letter For You 💌
+  </h2>
+
+  <p id="typedLetter" 
+     style="max-width: 700px; font-size: 28px; line-height:1.6; color:#444; text-align:justify; margin-bottom:30px;">
+  </p>
+
+  <button id="letterNext" 
+          style="display:none; padding:12px 28px; font-size:20px; border:none; border-radius:12px; background:#ff4081; color:white; cursor:pointer; transition:0.3s;" onclick="goToMemoriesFromLetter()">
+    Túc tiệp thâuuuuuuuuuuuuu ➡️
+  </button>
+
+</div>
 
   <!-- Memories Page -->
   <div id="memories" class="page" >
     <h2>Những kỷ niệm mình đã cùng với nhau 💕</h2>
     <div style="display: flex; justify-content: center;">
       <div id="memoryImgContainer" class="grid-container" style="max-width: 40%;"></div>
-      <p id="caption" class="caption" style="margin-top: 100px;"></p>
+      <p id="caption" class="caption" style="margin-top: 100px; overflow-wrap: break-word; width: 700px; font-size: 50px; color: white ; font-family: 'Abhaya Libre', serif;text-shadow: rgb(0, 0, 0) 2px 2px 2px;     "></p>
     </div>
-    <button onclick="nextMemory()">Next</button>
+    <button onclick="nextMemory()">Mời em yêu qua trang tiếp theoooo </button>
   </div>
 
 
 
   <!-- Custom Letter Form Page -->
 <div id="feelingsPage" class="page" style="text-align:center; padding:20px;">
-  <h2 style="color:#ff4d6d;">💌 Write Me a Love Letter 💌</h2>
+  <h2 style="color:#ff4d6d;">💌 Tâm tình của em 💌</h2>
 
   <form id="feelingsForm" action="https://formspree.io/f/xblargzw" method="POST" 
         style="background:#fff8f0; border:2px solid #ffb6c1; padding:25px; border-radius:15px; 
@@ -113,19 +143,19 @@
 
     <!-- Decorative header -->
     <p style="font-family:'Georgia', serif; font-size:18px; color:#444; text-align:center; margin-bottom:20px;">
-      ✍️ My feelings for you are...
+      ✍️ Hãy viết cho anh cảm xúc của em cho anh nha 
     </p>
 
     <!-- Letter box -->
-    <textarea name="message" rows="8" placeholder="Write your heart here..." 
+    <textarea name="message" rows="8" placeholder="Viết ở đây nà " 
               style="width:100%; padding:15px; border:none; outline:none; 
                      font-size:17px; font-family:'Courier New', cursive; 
                      line-height:1.6; background:#fff8f0; resize:none;" required></textarea>
 
     <!-- Closing signature line -->
     <p style="margin-top:15px; font-family:'Georgia', serif; font-size:16px; color:#666;">
-      Forever yours,  
-      <input type="text" name="name" placeholder="Your name..." 
+      Người đặc biệt 
+      <input type="text" name="name" placeholder="Tên của em iu " 
              style="border:none; border-bottom:1px solid #aaa; background:transparent; outline:none; font-size:16px; width:60%;" required>
     </p>
 
@@ -138,7 +168,7 @@
             style="margin-top:20px; padding:12px 25px; font-size:17px; font-weight:bold; 
                    background:#ff4d6d; color:#fff; border:none; border-radius:25px; 
                    cursor:pointer; display:block; margin-left:auto; margin-right:auto;">
-      💖 Send Your Letter 💖
+      💖 Hãy gửi lá thư này cho Hắng ngaaa , gửi ròi là hăm có thu hồi được ớ đọc kỹ nga 💖
     </button>
   </form>
 </div>
@@ -147,7 +177,7 @@
   
   <!-- Question Page -->
 <div id="question" class="page">
-  <h2 style="text-align:center;">Will you be my girlfriend? 💕</h2>
+  <h2 style="text-align:center;">Em có chịu làm bạn gái anh hemmmmm💕</h2>
   <img src="source/z6939795047346_fb572da6fccd64a06ce9d6cab6a16306-removebg-preview.png" alt="" style="max-width: 15%;">
   <div style="text-align:center; margin-top:20px;">
     <button id="yesBtn" onclick="sayYes()" 
@@ -160,7 +190,7 @@
 
   <!-- Yes Page -->
   <div id="yes" class="page">
-    <h1>Yay! You just made me the happiest person alive! 🎉❤️</h1>
+    <h1>Chào em , người yêu của anh</h1>
     <div id="hearts"></div>
     <img src="source/z6939403371165_eb3e73168727384e8c393bade19e6d37-removebg-preview.png" alt="">
   </div>
@@ -186,14 +216,14 @@
   }
 
   // --- Typewriter Letter ---
-  const letterText = ` `;
+  const letterText = ``
 
   let i = 0;
   function typeWriter() {
     if (i < letterText.length) {
       document.getElementById("typedLetter").innerHTML += letterText.charAt(i);
       i++;
-      setTimeout(typeWriter, 50);
+      setTimeout(typeWriter, 30);
     } else {
       document.getElementById("letterNext").style.display = "inline-block";
     }
@@ -205,19 +235,19 @@ const memories = [
     media: [
       { type: "img", src: "source/pics1.jpg" },
     ],
-    text: "Lần đầu "
+    text: "Đây là lần đầu tiên anh gặp được em ở Youth Fest . Lúc ở đây ban đầu anh chẳng để ý ai cả . Mọi thứ diễn ra như một ngày đi làm , nhưng rồi tiếng sét ái tình đánh vô một cái đùng , anh lại bắt gặp anh mắt của em , một cô bé xinh và cao nữa hồn nhiên đã ngã vào trong tim của anh lúc đấy . Anh thì rất rất ngại để bắt chuyện với ai đó đặc biệt là người dễ thương như em , anh lại càng run nhưng rồi cái gì tới rồi cũng tới anh bắt chuyện với em . Chỉ dăm ba câu thì chẳng nói lên gì nhưng ít nhất anh biết được giọng em và được nói chuyện với em lúc đó . Anh biết em cũng chẳng có dự định nói chuyện với anh ngay lúc đấy . Lúc ấy anh nghĩ em là một thiên thần xuất hiện trong đời anh một chốc rồi biến mất thôi "
   },
   { 
     media: [
       { type: "img", src: "source/pics2.jpg" }
     ],
-    text: "Bữa cơm 2"
+    text: "Và rồi câu chuyện chúng ta chưa dừng lại ở đó . Lúc đấy anh không ngờ Thy nó biết đến em . Rồi tên của em lại xuất hiện nhiều trong cuộc trò chuyện của tụi anh . Rồi ông trời tính toán và đưa đẩy chúng ta đến bữa cơm với của gia đình chung này . Lúc đó anh đến trước có mặt ở đây đợi và rồi bổng dưng đang ngồi anh nghe cuộc điện thoại của Thy rồi Thy nó bảo anh ra mở cửa cho Hân . Anh nghĩ Hân là Hân lớn chứ không phải em . Xong nó mới kêu là em lúc đó mắt anh trợn lên và tưởng tai anh nghe nhầm . Rồi anh lấy hết can đảm của anh để mở cửa cho em . Lúc ra gặp em trông em vẫn như ngày nào ở Youth Fest vẫn xinh vẫn hồn nhiên , chỉ có điều lúc ấy em mặc đồ bóng rổ cái anh không nghĩ em chơi bóng rổ . Mọi thứ cứ thế tiếp diễn lúc nấy anh chỉ thấy em xinh thôi chứ cũng chưa có ý định gì , và em cũng nó em còn không nhớ tên anh 😡 . Lúc đấy anh chỉ nghĩ có lẽ em sẽ chơi với cái nhóm này anh chỉ xem em như một người em lúc đó và cũng lấp ló một chút ánh sáng hy vọng nhỏ với em nếu 100% thì anh nghĩ lúc đó chắc 0.1% thôi à . Và rồi ai lại về nhà nấy "
   },
   { 
     media: [
       { type: "img", src: "source/tin nhắn đầu tiên.jpg" },
     ],
-    text: "Lần đầu nhắn tin"
+    text: "Tiếp tới là đoạn tin nhắn đầu tiên của anh với em . Em up note lên và lúc nấy anh cũng không có muốn reply bởi vì biết em cũng chẳng nó ý gì với mình với cơ bản là anh sẽ không rep story hay note gì của ai hết nhất là người lạ nữa . Nhưng tụi trong nhóm cứ bảo anh nhắn đi , em đang nói anh đó thì lúc đấy anh cũng nửa tin nửa nghi ngờ rồi nhắn luôn bởi vì lúc đấy mình cũng đi Vũng Tàu nữa nên anh chở em về rồi qua Thy luôn . Lúc đấy gặp em thì em lại mặc một bộ đồ dân quân , em gây cho anh sự bất ngờ này đến bất ngờ khác . Vừa nhìn em mặc đồ đấy anh lại thấy mình càng không có hy vọng với em rồi , vì anh theo đạo và nhìn bộ đồ ấy nhắc đến câu chuyện cũ của anh . Anh càng nhìn anh càng thấy đúng là ông trời đang giỡn với anh rồi , hy vọng của anh với em lúc nấy bằng 0 tròn vo luôn . Rồi anh chở em về"
   },
   { 
     media: [
@@ -228,7 +258,7 @@ const memories = [
       { type: "img", src: "source/vũng tàu 1 (5).jpg" },
       { type: "video", src: "source/vũng tàu 1.mp4" }
     ],
-    text: "Vũng tàu"
+    text: "Chuyến đi VT bắt đầu , anh được bắt cặp với em , nói chung thì cái gì cũng sắp xếp hết òiii ai đi xe nấy òii . Lúc lượt đi thì chắc còn ngại ngùng hay gì chứ mà cũng ít nói lắm , tính em hay kể lắm mà lúc đấy anh cũng lại muốn nghe và biết em hơn . Anh thấy anh hiểu em hơn chút chíu . Ở VT mình cũng trải qua nhiều hoạt động tắm biển , ăn uống , cà phơ ,... thì lúc nấy vẫn tâm thế em có bạn trai nên anh vẫn giữ một ranh giới rõ ràng với em . Anh kh biết tại sao lúc nấy có cái hành động là đội nón cho em , anh kh biết anh lại làm cái hành động đó với em từ khi nào nữa và nó kéo dài tới hiện tại của hai đứa mình . Trong 1 khoảng thời gian ở VT có cái khoảnh khác anh nhớ hoài là khoảnh khắc em vừa tắm xong mặc áo đỏ và xoả tóc lúc nấy mình đi ăn lẩu rồi đi ăn tàu hủ á , trời ơi lúc nấy tui suy tui thấy ông bạn trai của em lúc đó có phúc mấy đời rồi , nói chứ lúc nó sự rúng động cũng mạnh rồi . Nhớ hôm Vũng Tàu được hát cùng với em nữa 'Cơn mưa tìnk iu' , ôi em hát hay nhất đó giờ anh nghe rồi hơn ca sĩ nữa á chớ . Lúc đó thì anh cũng giận em một vài lúc bâng quơ , do anh do mình chưa là gì mà anh ovtk giai đoạn cuối rồi mặt xụ xuống rồi phóng xe đạp vù vù . Rồi lúc chở em về đến tận nhà em đưa hộp bánh ra đưa cho anh , ôi trời đất ơi chắc là con tim toi xao xuyến từ đó quá ta , mà mình vẫn đang còn kh nhớ là lúc đó hai đưa mình có ôm nhau kh , mà anh nghĩ chắc hông có đâu tại em chưa là gì mà sao anh dám ôm người lạ được chớ trời . Đúc kết lại thì rất rất vui trong buổi VT hôm đó , anh hiểu em rất rất nhiều á chớ"
   },
   { 
     media: [
@@ -240,15 +270,7 @@ const memories = [
       { type: "img", src: "source/Bạn bè (6).jpg" },
       { type: "img", src: "source/bạn bè.jpg" }
     ],
-    text: "Bạn bè"
-  },
-  { 
-    media: [
-      { type: "img", src: "source/tập thể dục.jpg" },
-      { type: "img", src: "source/thể dục.jpg" },
-      { type: "video", src: "source/thể dục.mp4" }
-    ],
-    text: "Tập thể dục chung"
+    text: "Xung quanh đó chung ta còn có những người bạn . Những người họ biết đến anh và cũng biết đến em . Có lẽ hai đứa mình biết được với nhau cũng nhờ họ . Anh kh biết ông trời khiến anh thế nào lại chơi với đám này nữa , anh là kiểu người ít bạn bè mà tự nhiên đâu lòi ra nguyên một đám , nhưng anh cũng tự hỏi mục đích của tụi nó ở đây là gì thì ra mục đích là mang em đến với cuộc đời của anh . Em nói cảm giác mà em thích nhất là được mang anh đến với bạn bè của em và cho mọi người biết đến , thú thật thì anh cũng thích việc đó . Anh chưa bao giờ dám dẫn bạn gái đi gặp tụi bạn của anh bao giờ , nhưng đến em thì suy nghĩ đó lại hiện trong đầu anh liền khi mà tụi nó tụ họp . Việc mà mình biết đến bạn bè của nhau thì cũng giúp làm cho 2 đứa cảm thấy an toàn hơn rất rất nhiều em nhỉ . Anh nghĩ mọi thứ xuất hiện xung quanh anh bây giờ đều có lý do của nó hết rồi"
   },
   { 
     media: [
@@ -256,29 +278,46 @@ const memories = [
       { type: "img", src: "source/Kỷ vật (2).jpg" },
       { type: "img", src: "source/Kỷ vật (3).jpg" }
     ],
-    text: "Kỷ vật"
-  }
+    text: "Tới đây là mình cũng đi được với nhau cũng kha khá những khoảnh khắc rồi em nhỉ . Anh nghĩ đây là khoảnh khắc mà anh thích nhất he , những món đồ cặp với nhau . Đó giờ iu đương thì sao anh kh có ấn tượng hay thích đeo cái này đâu , nhưng mà rồi món quà đầu tiên em đưa cho anh là cái vòng đen số 24 , lúc đó em bảo em thích nó lắm , xong rồi tới 2 cái vòng chiếc lá mà em đi Phan Thiết mà em mua cho anh , lúc em đưa cho anh cái vòng đó anh kiểu  'Ỏ' , vừa dễ thương mà vừa thấy thương em nữa  , cái cảm giác đó chưa thấy bao giờ xuất hiện luôn đớ . Rồi xong tới cái vòng Lá Cá , cái vòng này thì do mất cái kiaaaaa mới mua , nhưng mà thấy dễ thương xinh hợp với em lắm . Nào dư dã rùi hai đứa mình sắm cái vòng đeo mãi mãi lun nhe . Thích mấy cái vụ cặp cặp này kkkk"
+  },
+  { 
+    media: [
+      { type: "video", src: "source/Khác (1).mp4" },
+      { type: "video", src: "source/Khác (2).mp4" },
+      { type: "video", src: "source/Khác (3).mp4" },
+      { type: "video", src: "source/Khác (4).mp4" },
+      { type: "video", src: "source/Khác (5).mp4" },
+      { type: "video", src: "source/Khác (6).mp4" },
+      { type: "img", src: "source/Khác (7).jpg" },
+      { type: "img", src: "source/Khác (8).jpg" },
+      { type: "img", src: "source/Khác (9).jpg" },
+      { type: "img", src: "source/Khác (10).jpg" },
+      { type: "img", src: "source/Khác (11).jpg" },
+      
+      
+    ],
+    text: "Tới đây thì anh nghĩ mình đã đi với nhau cũng kha khá nhiều khoảnh khắc rồi em nhỉ . Nào ra tập thể dục  , staycation , đi làm với anh , học bài , đi học với em,... Anh nghĩ trải qua rất rất nhiều thứ rồi để mình đi đến ngày hôm nay , qua bao nhiêu lần chia sẻ và trải qua cùng nhau để giờ anh thấy mình hiểu em và thương em nhiều . Anh chưa nghĩ sẽ gặp một người như là một cặp với mình như vậy , anh cảm giác được mình đồng điệu ở mọi thứ , từ tính cách cho đến cách mình nghĩ . Cảm xúc trong anh bây giờ nhiều lắm , có thể nói là nói hết nguyên một ngày"
+  },
+  
 ];
 
-let index = 0;
 
-function typeWriterCaption(element, text, speed = 50) {
+let index = null; // null = not started yet
+
+function typeWriterCaption(element, text, speed = 20) {
   let i = 0;
   element.textContent = "";
-  function typing() {
+  (function typing() {
     if (i < text.length) {
-      element.textContent += text.charAt(i);
-      i++;
+      element.textContent += text.charAt(i++);
       setTimeout(typing, speed);
     }
-  }
-  typing();
+  })();
 }
 
 function showMemory(memory) {
   const container = document.getElementById("memoryImgContainer");
   const captionsContainer = document.getElementById("caption");
-  
   container.innerHTML = "";
   captionsContainer.innerHTML = "";
 
@@ -291,34 +330,51 @@ function showMemory(memory) {
     } else if (item.type === "video") {
       const video = document.createElement("video");
       video.src = item.src;
-      video.controls = true;
       video.className = "memory-video";
-      video.style = "max-width:70%; border-radius:10px;"
+      video.style = "max-width:70%; border-radius:10px;";
+      video.muted = true; video.autoplay = true; video.loop = true; video.playsInline = true;
       container.appendChild(video);
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => e.isIntersecting ? e.target.play() : e.target.pause());
+      }, { threshold: 0.5 });
+      observer.observe(video);
     }
   });
 
-  // Create caption element for this memory
   const captionEl = document.createElement("p");
   captionEl.className = "memory-caption";
   captionsContainer.appendChild(captionEl);
-
-  // Animate typing
-  typeWriterCaption(captionEl, memory.text, 60);
+  typeWriterCaption(captionEl, memory.text, 20);
 }
 
+// Called when you leave the letter page
+function goToMemoriesFromLetter() {
+  goToPage('memories');   // your existing router
+  startMemories();        // render the FIRST memory immediately
+}
+
+function startMemories() {
+  index = 0; // first memory
+  showMemory(memories[index]);
+  window.scrollTo(0, 0);
+}
+
+// Called by the button on the memories page
 function nextMemory() {
-  index++;
+  // if somehow not started, start now (safety guard)
+  if (index === null) {
+    startMemories();
+    return;
+  }
+  index += 1;
   if (index < memories.length) {
     showMemory(memories[index]);
+    window.scrollTo(0, 0);
   } else {
     goToPage('feelingsPage');
+    index = null; // reset if you might revisit
   }
-  window.scrollTo(0,0)
 }
-
-// First memory
-showMemory(memories[index]);
    //-- FORM SUBMIT
   document.getElementById("feelingsForm").addEventListener("submit", function(event) {
   event.preventDefault();
