@@ -392,7 +392,6 @@ function nextMemory() {
   })
   .then(response => {
     if (response.ok) {
-      alert("Message sent!");
       goToPage('question');  // your custom function
     } else {
       response.json().then(data => {
