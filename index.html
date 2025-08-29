@@ -135,8 +135,8 @@
 
   <!-- Custom Letter Form Page -->
 <div id="feelingsPage" class="page" style="text-align:center; padding:20px;">
+  <h4 style="color:#f8f8f8;">Sau khi em xem xong những kỷ niệm mà mình trải qua rồi , anh chắc chắn em sẽ cười vì anh khi đọc xong những lời anh viết anh cũng cười quá trời , cười vì hạnh phúc vì chưa bao giờ anh làm cái này . Vậy em hãy nói cảm xúc của em cho anh nghe nha </h4>
   <h2 style="color:#ff4d6d;">💌 Tâm tình của em 💌</h2>
-
   <form id="feelingsForm" action="https://formspree.io/f/xblargzw" method="POST" 
         style="background:#fff8f0; border:2px solid #ffb6c1; padding:25px; border-radius:15px; 
                display:inline-block; width:80%; max-width:600px; box-shadow:0 4px 12px rgba(0,0,0,0.15); text-align:left;">
@@ -190,7 +190,7 @@
 
   <!-- Yes Page -->
   <div id="yes" class="page">
-    <h1>Chào em , người yêu của anh</h1>
+    <h1>Chào em , người yêu của anh 💖</h1>
     <div id="hearts"></div>
     <img src="source/z6939403371165_eb3e73168727384e8c393bade19e6d37-removebg-preview.png" alt="">
   </div>
@@ -216,10 +216,19 @@
   }
 
   // --- Typewriter Letter ---
-  const letterText = `Chào em , có lẽ chúng ta đã bên nhau với tư cách là một người bạn cũng đã lâu lắm rồi ha 
-Anh không biết khi nào mình đã thương em nữa , nhưng rồi cũng qua nhiều chuyện với nhau ta dần hiểu nhau hơn biết rõ con người của nhau hơn và từ đó ta thương nhau 
-Em biết không ? Em là người con gái mà anh chưa bao giờ tưởng tượng đến mình sẽ có em trong cuộc sống của anh . Một người từ ngoại hình đến tính cách là thứ anh luôn luôn mơ mộng đến . Và rồi em xuất hiện ở đây , thứ mà ông trời mang đến cho anh 
-Bên nhau cũng thấm thoát gần 4 tháng trời rồi . Chúng ta cũng có những kỷ niệm cùng nhau . Em hay cùng anh nhìn sơ qua 4 tháng trước chúng mình đã có những kỷ niệm gì nhé `
+  const letterText = `Chào em,
+Có lẽ chúng ta đã bên nhau với tư cách là một người bạn cũng đã lâu lắm rồi ha.
+
+Anh không biết chính xác từ khi nào mình đã thương em nữa... Nhưng rồi, qua nhiều chuyện cùng nhau, ta dần hiểu nhau hơn, biết rõ con người của nhau hơn — và từ đó, ta thương nhau.
+
+Em biết không?
+Em là người con gái mà anh chưa bao giờ tưởng tượng rằng mình sẽ có được trong cuộc sống.
+Một người từ ngoại hình đến tính cách — chính là hình mẫu mà anh luôn mơ mộng.
+Và rồi, em xuất hiện... như món quà mà ông trời đã mang đến cho anh.
+
+Bên nhau cũng thấm thoát gần 4 tháng rồi.
+Chúng ta đã có thật nhiều kỷ niệm cùng nhau.
+Em à, hãy cùng anh nhìn lại một chút — xem trong 4 tháng qua, chúng mình đã đi qua những gì, đã cùng nhau có những kỷ niệm nào nhé. `
 
   let i = 0;
   function typeWriter() {
@@ -307,7 +316,7 @@ const memories = [
 
 let index = null; // null = not started yet
 
-function typeWriterCaption(element, text, speed = 20) {
+function typeWriterCaption(element, text, speed = 10) {
   let i = 0;
   element.textContent = "";
   (function typing() {
@@ -347,7 +356,7 @@ function showMemory(memory) {
   const captionEl = document.createElement("p");
   captionEl.className = "memory-caption";
   captionsContainer.appendChild(captionEl);
-  typeWriterCaption(captionEl, memory.text, 20);
+  typeWriterCaption(captionEl, memory.text, 10);
 }
 
 // Called when you leave the letter page
